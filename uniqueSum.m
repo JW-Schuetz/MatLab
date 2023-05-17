@@ -1,8 +1,10 @@
-function [ uniqueT, uniqueD ] = uniqueSum( t, d )
+function [ uniqueT, uniqueD ] = uniqueSum( t, d, ~ )
     % removes multiple occourance of elements in vector t - the unique
     % vector uniqueT is returned
-    % provides the sum of corresponding elements of multiples in vector d
-    % in vector uniqueD
+    % provides the sum (or the mean) of corresponding elements of 
+    % multiples in vector d in vector uniqueD
+    % called with 2 arguments: uniqueD is the sum
+    % called with 3 arguments: uniqueD is the mean
 
     % transform into column vectors
     t = t( : );
@@ -33,6 +35,11 @@ function [ uniqueT, uniqueD ] = uniqueSum( t, d )
         if( a ~= 1 )
             m            = ndxuT( n );
             uniqueD( n ) = sum( d( m : m + a - 1 ) );
+
+            switch nargin
+                case 3
+                    uniqueD( n ) = uniqueD( n ) / a;
+            end
         end
     end
 end
