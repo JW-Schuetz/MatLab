@@ -1,0 +1,215 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{a4}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Von diversen MatLab-Funktionen werden Indexvektoren zurückgeliefert.
+\end_layout
+
+\begin_layout Standard
+Z.B.
+ wenn a, b, c, ia, und ib Vektoren sind, von der Funktion
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ c, ia, ib ] = intersect( a, b )
+\end_layout
+
+\begin_layout Standard
+die beiden Indexvektoren ia und ib.
+ MatLab beschreibt ihre Bedeutung durch die Formeln
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+c = a( ia )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+c = b( ib ).
+\end_layout
+
+\begin_layout Standard
+Was bedeuten diese Formeln mathematisch?
+\end_layout
+
+\begin_layout Standard
+Es gelte mit 
+\begin_inset Formula $\underline{c}\in\mathbb{R}^{C}$
+\end_inset
+
+, 
+\begin_inset Formula $\underline{a}\in\mathbb{R}^{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underline{b}\in\mathbb{R}^{M}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{c} & = & U\underline{a}\\
+\underline{c} & = & V\underline{b}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit den Diagonalmatrizen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+U & = & \left(\begin{array}{cccc}
+u_{1}\\
+ & u_{2}\\
+ &  & \ddots\\
+ &  &  & u_{N}
+\end{array}\right)\\
+V & = & \left(\begin{array}{cccc}
+v_{1}\\
+ & v_{2}\\
+ &  & \ddots\\
+ &  &  & v_{M}
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei gilt für die Diagonalelemente 
+\begin_inset Formula $d_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{n} & = & \begin{cases}
+\begin{array}{c}
+1\\
+0
+\end{array} & \begin{array}{c}
+\\
+\\
+\end{array}\end{cases}\\
+v_{m} & = & \begin{cases}
+\begin{array}{c}
+1\\
+0
+\end{array} & \begin{array}{c}
+\\
+\\
+\end{array}\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
