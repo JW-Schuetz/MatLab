@@ -1,8 +1,8 @@
-function [ zaehlerstand, d, h ] = PrepareMeasuredValues( Messwerte, varargin )
+function [ zaehlerstand, d, h ] = prepareMeasuredValues( Messwerte, varargin )
+    Spalte = 2;
+
     if( nargin == 2 ) 
-        Spalte = 3;
-    else
-        Spalte = 2;
+        Spalte = cell2mat( varargin );
     end
 
     M            = length( Messwerte );
