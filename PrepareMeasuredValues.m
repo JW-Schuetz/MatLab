@@ -5,7 +5,7 @@ function [ zaehlerstand, d, h ] = prepareMeasuredValues( Messwerte, varargin )
         Spalte = cell2mat( varargin );
     end
 
-    M            = length( Messwerte );
+    M            = size( Messwerte, 1 );
     zaehlerstand = zeros( M, 1 );
     h            = zeros( M, 1 );
     d            = datetime;
